@@ -17,6 +17,7 @@
           <li class="active"><a href="/">Home <span class="sr-only">Home</span></a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/contact">Contact</a></li>
+        <li><a href="/messages">Messages</a></li>
      
       </ul>
      

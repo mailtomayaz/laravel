@@ -8,7 +8,7 @@ use App\Message;
 
 class MessagesController extends Controller
 {
-    //
+    //get submited data from the contact form and save into database
     public function submit(Request $request){
         $this->validate($request,[
             'username'=> 'required',
@@ -25,5 +25,10 @@ class MessagesController extends Controller
         //redirect to home page
         return redirect('/')->with('status','Message Sent');
         
+    }
+    //get data from the database 
+    public function getMessages(){
+        $messages = Message::all();
+        return view('messages')->with('messages',$messages);
     }
 }
