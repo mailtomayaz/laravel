@@ -25,3 +25,6 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+//submit/post form to the controller MessagesController and to its submit method 
+Route::post('/contact/submit/','MessagesController@submit');
