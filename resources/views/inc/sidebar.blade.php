@@ -1,5 +1,6 @@
 @section('sidebar')
-<div class="">
-    <h3>parent sidebar only for home page</h3>
-@show
+<div class="well">
+    @parent
+ <h3>side bar</h3>
 </div>
+@show
