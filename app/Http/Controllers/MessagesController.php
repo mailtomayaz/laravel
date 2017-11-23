@@ -23,7 +23,7 @@ class MessagesController extends Controller
         //save message
         $message->save();
         //redirect to home page
-        return redirect('/');
+        return redirect('/')->with('status','Message Sent');
         
     }
 }
