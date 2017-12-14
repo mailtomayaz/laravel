@@ -1,6 +1,8 @@
 ﻿/*
 Installation of laravel
 compilation of scss and js
+you may find packages here
+info: packagist.org
 
 */
 
@@ -20,6 +22,4 @@ php artisan make:model Messsage -m
 this would create the model of name Message and -m mean that also create the migration file for the database. We dont need to create database through phpmyadmin
 go to the database/migrations/.....create_messages_table.php and add your form fields in up function of the database
 create database and add detials in .env
-
-
-
+run the command 

@@ -12,22 +12,16 @@
 */
 
 //home page
-Route::get('/', function () {
-    return view('home');
-});
-
+Route::get('/', 'PagesController@getHomePage');
 //about us page
-Route::get('/about', function () {
-    return view('about');
-});
-
+Route::get('/about', 'PagesController@getAboutPage');
 //contact us 
-Route::get('/contact', function () {
-    return view('contact');
-});
-
+Route::get('/contact','PagesController@getContactPage');
 //get messages form to the controller MessagesController and to its submit method 
 Route::get('/messages/','MessagesController@getMessages');
-
 //submit/post form to the controller MessagesController and to its submit method 
 Route::post('/contact/submit/','MessagesController@submit');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
