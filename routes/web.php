@@ -19,9 +19,15 @@ Route::get('/about', 'PagesController@getAboutPage');
 Route::get('/contact','PagesController@getContactPage');
 //get messages form to the controller MessagesController and to its submit method 
 Route::get('/messages/','MessagesController@getMessages');
+//get single message form to the controller MessagesController and to its submit method 
+Route::get('/messages/{id}','MessagesController@getMessage');
 //submit/post form to the controller MessagesController and to its submit method 
 Route::post('/contact/submit/','MessagesController@submit');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+//route::controllers([
+//    'auth' => 'Auth\AuthController',
+//    'password'=> 'Auth\PasswordController',
+//]);

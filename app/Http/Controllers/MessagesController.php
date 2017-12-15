@@ -31,4 +31,10 @@ class MessagesController extends Controller
         $messages = Message::all();
         return view('messages')->with('messages',$messages);
     }
+      //get data from the database 
+    public function getMessage($id){
+        $message = Message::find($id);
+        //dd($message);
+        return view('show')->with('message',$message);
+    }
 }
